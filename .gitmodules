@@ -13,3 +13,6 @@
 [submodule "vim-jst"]
 	path = vim-jst
 	url = https://github.com/briancollins/vim-jst.git
+[submodule "syntastic"]
+	path = syntastic
+	url = https://github.com/scrooloose/syntastic.git
