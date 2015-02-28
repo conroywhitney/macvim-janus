@@ -1,0 +1,15 @@
+[submodule "ir_black"]
+	path = ir_black
+	url = https://github.com/twerth/ir_black.git
+[submodule "vim-json"]
+	path = vim-json
+	url = https://github.com/elzr/vim-json.git
+[submodule "MatchTag"]
+	path = MatchTag
+	url = https://github.com/gregsexton/MatchTag.git
+[submodule "tabular"]
+	path = tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "vim-jst"]
+	path = vim-jst
+	url = https://github.com/briancollins/vim-jst.git
