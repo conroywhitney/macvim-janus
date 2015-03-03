@@ -131,10 +131,21 @@ set modelines=10
 " going to override in .vimrc.after
 
 " remove error noises
+" thanks: http://superuser.com/questions/553684/vim-how-to-play-without-the-beeps
 set noerrorbells visualbell t_vb=
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
+
+" Control-P (CTRL+P) highlight color
+" thanks: http://stackoverflow.com/questions/26434254/how-can-i-customize-the-line-highlight-color-in-vim-ctrlp
+let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
+function BrightHighlightOn()
+  hi CursorLine guibg=darkred
+endfunction
+function BrightHighlightOff()
+  hi CursorLine guibg=#191919
+endfunction
 
 " Directories for swp files
 set backupdir=~/.vim/backup
