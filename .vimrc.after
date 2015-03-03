@@ -3,6 +3,19 @@ let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute "ng-']
 " override default colour scheme
 colorscheme ir_black
 
+" Control-P (CTRL+P) highlight color
+" thanks: http://stackoverflow.com/questions/26434254/how-can-i-customize-the-line-highlight-col
+let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
+function BrightHighlightOn()
+  hi CursorLine guibg=darkred
+endfunction
+function BrightHighlightOff()
+  hi CursorLine guibg=#191919
+endfunction
+
+" on-page search color
+hi Search guibg=peru guifg=wheat
+
 " json filetype
 au BufRead,BufNewFile *.json set filetype=json
 
